@@ -1,14 +1,18 @@
-const share_btn = document.querySelector(".ad__footer button");
-const share_btn_socials = document.querySelector(".socials button");
-const ad__footer = document.querySelector(".ad__footer");
-const socials = document.querySelector(".socials");
+const share_btn = document.querySelector(
+	".article__footer--regular .btn-share"
+);
+const share_btn_socials = document.querySelector(
+	".article__footer--active .btn-share"
+);
+const artl__footer = document.querySelector(".article__footer--regular");
+const socials = document.querySelector(".article__footer--active");
 
 share_btn.addEventListener("click", () => {
-	ad__footer.style.display = "none";
+	artl__footer.style.display = "none";
 	socials.style.display = "flex";
 });
 
 share_btn_socials.addEventListener("click", () => {
 	socials.style.display = "none";
-	ad__footer.style.display = "flex";
+	artl__footer.style.display = "flex";
 });

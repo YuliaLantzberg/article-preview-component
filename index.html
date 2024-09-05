@@ -11,67 +11,58 @@
 			sizes="32x32"
 			href="./images/favicon-32x32.png"
 		/>
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
-			rel="stylesheet"
-		/>
 		<link rel="stylesheet" href="style.css" />
 
 		<title>Frontend Mentor | Article preview component</title>
 	</head>
 	<body>
 		<main>
-			<div class="container">
-				<!-- Wrapper to make overflow hidden to work in mobile mode  -->
-				<article class="ad">
-					<img
-						src="images/drawers.jpg"
-						alt="The green dresser near the breaks decorated wall. On the comode there are small and big white decorative white frames and wheat color vase with bouqet of spikes of the same color in it. On the left of the dresser there is a part of the pillow also of the wheat color"
-					/>
-					<section class="ad__content">
-						<p class="ad__cta">
-							Shift the overall look and feel by adding these wonderful touches
-							to furniture in your home
-						</p>
-						<p class="ad__description">
-							Ever been in a room and felt like something was missing? Perhaps
-							it felt slightly bare and uninviting. I’ve got some simple tips to
-							help you make any room feel complete.
-						</p>
-					</section>
-					<section class="ad__footer">
-						<img
-							class="ad__author-img"
-							src="images/avatar-michelle.jpg"
-							alt="Michelle Appleton"
-						/>
-						<div class="ad__meta">
-							<p class="ad__author">Michelle Appleton</p>
-							<p class="ad__date">28 Jun 2020</p>
-						</div>
-						<button class="share-btn">
-							<img src="images/icon-share.svg" alt="share-icon" />
-						</button>
-					</section>
-					<section class="socials">
-						<h4>share</h4>
-						<div class="socials__links">
-							<img src="images/icon-facebook.svg" alt="facebook-icon" />
-							<img src="images/icon-twitter.svg" alt="twitter-icon" />
-							<img src="images/icon-pinterest.svg" alt="pinterest-icon" />
-						</div>
-
-						<button class="share-btn">
+			<article class="article">
+				<img
+					src="images/drawers.jpg"
+					alt="The green dresser near the breaks decorated wall. On the comode there are small and big white decorative white frames and wheat color vase with bouqet of spikes of the same color in it. On the left of the dresser there is a part of the pillow also of the wheat color. And the pillow in the wheat color on left of the dresser"
+				/>
+				<div class="article__content">
+					<p class="article__intro text-highlighted">
+						Shift the overall look and feel by adding these wonderful touches to
+						furniture in your home
+					</p>
+					<p>
+						Ever been in a room and felt like something was missing? Perhaps it
+						felt slightly bare and uninviting. I’ve got some simple tips to help
+						you make any room feel complete.
+					</p>
+					<div class="article__footer">
+						<!-- Replaced by active state in mobile mode -->
+						<div class="article__footer--regular">
 							<img
-								src="images/icon-share-white.svg"
-								alt="icon-arrow/share-button"
+								src="images/avatar-michelle.jpg"
+								class="article__author-img"
+								alt="Michelle Appleton"
 							/>
-						</button>
-					</section>
-				</article>
-			</div>
+							<div class="article__meta">
+								<p class="text-highlighted">Michelle Appleton</p>
+								<p class="article__date">28 Jun 2020</p>
+							</div>
+							<button class="btn-round btn-share">
+								<img src="images/icon-share.svg" alt="share button" />
+							</button>
+						</div>
+						<!-- Visible only in active or hover state -->
+						<div class="article__footer--active">
+							<p>Share</p>
+							<div class="socials-list">
+								<img src="images/icon-facebook.svg" alt="facebook link" />
+								<img src="images/icon-twitter.svg" alt="twitter link" />
+								<img src="images/icon-pinterest.svg" alt="pinterest link" />
+							</div>
+							<button class="btn-round btn-share">
+								<img src="images/icon-share-white.svg" alt="share button" />
+							</button>
+						</div>
+					</div>
+				</div>
+			</article>
 		</main>
 		<script src="script.js"></script>
 	</body>
