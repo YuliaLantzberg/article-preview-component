@@ -75,17 +75,18 @@ h6 {
 }
 
 /* General Styles */
-
-body {
+.body {
 	font-family: "Manrope", sans-serif;
 	font-size: 0.813rem;
 	font-weight: var(--fw-regular);
 	color: var(--desaturated-blue-500);
-
+	margin: 1.2rem;
 	display: grid;
 	place-content: center;
-	margin: 1.5rem;
 	background-color: var(--grayish-blue-200);
+}
+.container {
+	overflow-x: hidden;
 }
 
 /* Ad Styles */
@@ -113,6 +114,7 @@ body {
 	padding: 0 2.2rem 1rem 2.5rem;
 	justify-content: flex-start;
 	align-items: center;
+	position: relative;
 }
 
 .ad__meta {
@@ -141,19 +143,40 @@ body {
 
 /* Socials Styles */
 
-.ad__socials {
-	display: none;
-}
-
 .share-btn {
 	padding: 0.5rem;
 	border-radius: 50%;
 	border: none;
 	background-color: var(--grayish-blue-200);
+	cursor: pointer;
 }
 
 .share-btn img {
 	width: 15px;
 	height: 13px;
 	z-index: 100;
+}
+
+.socials {
+	background-color: var(--grayish-blue-600);
+	align-items: center;
+	padding: 1rem 2.2rem;
+	display: none;
+}
+
+.socials h4 {
+	margin-right: auto;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	font-weight: var(--fw-regular);
+}
+
+.socials__links {
+	display: flex;
+	gap: 1rem;
+}
+
+.socials .share-btn {
+	margin-left: auto;
+	background-color: var(--desaturated-blue-500);
 }
