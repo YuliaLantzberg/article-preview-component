@@ -111,20 +111,49 @@ body {
 .ad__footer {
 	display: flex;
 	padding: 0 2.2rem 1rem 2.5rem;
+	justify-content: flex-start;
+	align-items: center;
 }
 
 .ad__meta {
 	display: flex;
+	flex-direction: column;
 }
 
 .ad__author-img {
 	border-radius: 50%;
 	width: 2.5rem;
+	margin-right: 1rem;
 }
 
-.ad__meta p {
-	display: inline-block;
+.ad__author {
+	color: var(--grayish-blue-600);
+	font-weight: var(--fw-bold);
 }
+
+.ad__date {
+	color: var(--grayish-blue-400);
+}
+
+.ad__footer .share-btn {
+	margin-left: auto;
+}
+
+/* Socials Styles */
+
 .ad__socials {
 	display: none;
+}
+
+.share-btn {
+	padding: 0.5rem;
+	border-radius: 50%;
+	border: none;
+	background-color: var(--grayish-blue-200);
+}
+
+.share-btn img {
+	width: 15px;
+	height: 13px;
+	z-index: 100;
 }
