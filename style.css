@@ -195,7 +195,7 @@ main {
 	cursor: pointer;
 }
 
-@media (min-width: 62.5r) {
+@media (min-width: 62.5rem) {
 	body {
 		margin: 0;
 	}
