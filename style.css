@@ -5,6 +5,7 @@
 	--grayish-blue-400: hsl(212, 23%, 69%);
 	--grayish-blue-200: hsl(210, 46%, 95%);
 	--neutral-100: white;
+	--shadowColor: 0px 5px 15px var(--grayish-blue-400);
 
 	--fw-regular: 500;
 	--fw-bold: 700;
@@ -81,6 +82,15 @@ h6 {
 	color: var(--grayish-blue-600);
 }
 
+.triangle-down {
+	width: 0;
+	height: 0;
+	border-left: 15px solid transparent;
+	border-right: 15px solid transparent;
+	border-top: 15px solid var(--grayish-blue-600);
+	display: none;
+}
+
 /* General Styles */
 body {
 	font-family: "Manrope", sans-serif;
@@ -104,6 +114,7 @@ main {
 .article {
 	--article-spacing: 1rem;
 
+	max-width: 41.25rem;
 	border-radius: 0.5rem;
 	overflow: hidden;
 }
@@ -120,10 +131,13 @@ main {
 }
 
 .article__footer--regular {
-	display: flex;
+	display: none;
 	justify-content: flex-start;
 	gap: var(--article-spacing);
 	align-items: center;
+}
+.article__footer--regular.active {
+	display: flex;
 }
 
 .article__author-img {
@@ -148,6 +162,10 @@ main {
 	align-items: center;
 }
 
+.article__footer--active.active {
+	display: flex;
+}
+
 .article__footer--active p {
 	margin-right: auto;
 	text-transform: uppercase;
@@ -168,7 +186,7 @@ main {
 
 .btn-round {
 	border: none;
-	max-width: 2rem;
+	min-width: 2rem;
 	min-height: 2rem;
 	border-radius: 50%;
 	display: flex;
@@ -177,19 +195,68 @@ main {
 	cursor: pointer;
 }
 
-@media (min-width: 700px) {
+@media (min-width: 62.5r) {
 	body {
 		margin: 0;
 	}
 	.article {
-		max-width: 50%;
+		max-width: 45rem;
 		display: grid;
 		grid-template-columns: 40% 60%;
+		position: relative;
+		overflow: visible;
 	}
 	.article > img {
 		min-height: 100%;
+		border-top-left-radius: 0.5rem;
+		border-bottom-left-radius: 0.5rem;
 	}
+
 	.article__content {
 		margin-left: -3.5rem;
+		border-top-right-radius: 0.5rem;
+		border-bottom-right-radius: 0.5rem;
+	}
+
+	.article__footer--regular {
+		display: flex;
+	}
+
+	.article__footer--active .btn-share {
+		display: none;
+	}
+
+	.article__footer--active {
+		display: flex;
+		position: absolute;
+		min-width: 15rem;
+		top: 50%;
+		left: 77%;
+		transform: translateY(-50%);
+		border-radius: 0.5rem;
+		gap: 1rem;
+		margin: 0;
+		box-shadow: var(--shadowColor);
+		opacity: 0;
+		transition: opacity 0.3s;
+	}
+
+	.triangle-down {
+		display: block;
+		position: absolute;
+		top: 60%;
+		right: 2rem;
+		opacity: 0;
+		transition: opacity 0.2s;
+	}
+
+	.article__footer--active.hover,
+	.triangle-down.hover {
+		opacity: 1;
+	}
+
+	.article__footer--active.active {
+		display: flex;
+		opacity: 1;
 	}
 }
