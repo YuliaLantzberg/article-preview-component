@@ -121,7 +121,7 @@ main {
 }
 
 .article__content {
-	padding: 2rem;
+	padding: 1.5rem;
 	display: grid;
 	gap: var(--article-spacing);
 	background-color: var(--neutral-100);
