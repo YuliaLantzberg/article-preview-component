@@ -235,7 +235,7 @@ main {
 		left: 77%;
 		transform: translateY(-50%);
 		border-radius: var(--article-b-radius);
-		gap: 1rem;
+		gap: var(--article-spacing);
 		margin: 0;
 		box-shadow: var(--shadowColor);
 		opacity: 0;
